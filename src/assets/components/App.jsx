@@ -1,10 +1,12 @@
 // import { useState } from "react";
-import "./App.css";
+import "../css/App.css";
+
+import Menu from "./menu.jsx";
 
 function App() {
 	return (
 		<>
-			<div></div>
+			<Menu />
 			<h1>Astrillow2</h1>
 		</>
 	);
