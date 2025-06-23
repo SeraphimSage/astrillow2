@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import "../css/App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Menu from "./menu.jsx";
 

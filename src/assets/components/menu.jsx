@@ -9,6 +9,8 @@ function Menu() {
 	return (
 		<Navbar
 			expand="lg"
+			bg="dark"
+			data-bs-theme="dark"
 			className="bg-body-tertiary"
 		>
 			<Container className="navbar-wrapper">
@@ -19,13 +21,16 @@ function Menu() {
 							src={PersonalLogo}
 							width="30"
 							height="30"
-							className="logo d-inline-block align-top"
+							className="d-inline-block align-top logo-navbar-img"
 						/>{" "}
 						Astrillow2
 					</div>
 				</Navbar.Brand>
+
+				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="me-auto">
+					<Nav className="ms-auto">
 						<Nav.Link href="/">Home</Nav.Link>
 						<Nav.Link href="#link">Link</Nav.Link>
 					</Nav>
