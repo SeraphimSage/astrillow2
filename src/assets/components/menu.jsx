@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import PersonalLogo from "../images/Favicon.png";
 
@@ -17,7 +17,7 @@ function Menu() {
 		setIsProfileDropdownOpen(!isProfileDropdownOpen);
 	};
 	return (
-		<nav className="bg-gray-800 fixed top-0 inset-x-0 z-50">
+		<nav className="bg-gray-900/60 backdrop-blur-lg fixed top-0 inset-x-0 z-50 border-b border-gray-700/50">
 			<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 				<div className="relative flex h-16 items-center justify-between">
 					<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -31,11 +31,7 @@ function Menu() {
 						>
 							<span className="absolute -inset-0.5"></span>
 							<span className="sr-only">Open main menu</span>
-							{/* <!--
-            Icon when menu is closed.
-
-            Menu open: "hidden", Menu closed: "block"
-          --> */}
+							
 							<svg
 								className={isMobileMenuOpen ? "hidden size-6" : "size-6"}
 								fill="none"
@@ -51,11 +47,7 @@ function Menu() {
 									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 								/>
 							</svg>
-							{/* <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          --> */}
+							
 							<svg
 								className={isMobileMenuOpen ? "block size-6" : "hidden size-6"}
 								fill="none"
@@ -164,21 +156,10 @@ function Menu() {
 								</button>
 							</div>
 
-							{/* <!--
-            Dropdown menu, show/hide based on menu state.
-
-            Entering: "transition ease-out duration-100"
-              From: "transform opacity-0 scale-95"
-              To: "transform opacity-100 scale-100"
-            Leaving: "transition ease-in duration-75"
-              From: "transform opacity-100 scale-100"
-              To: "transform opacity-0 scale-95"
-          --> */}
-
 							{/* Dropdown menu, show/hide based on menu state. */}
 							{isProfileDropdownOpen && ( // Conditionally render based on state
 								<div
-									className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-hidden"
+									className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-900/80 backdrop-blur-md py-1 shadow-lg ring-1 ring-neon-blue/30 focus:outline-none border border-gray-700/50"
 									role="menu"
 									aria-orientation="vertical"
 									aria-labelledby="user-menu-button"
@@ -218,7 +199,6 @@ function Menu() {
 					</div>
 				</div>
 			</div>
-
 			{/* <!-- Mobile menu, show/hide based on menu state. --> */}
 			<div
 				className={isMobileMenuOpen ? "sm:hidden" : "hidden sm:hidden"}
