@@ -27,3 +27,13 @@
 .logo-spin-manual {
 	animation: logospin 10s linear infinite;
 }
+
+.logo {
+	will-change: filter;
+	transition: filter 300ms;
+	filter: drop-shadow(1px 1px #cbd8e5);
+}
+
+.logo:hover {
+	filter: drop-shadow(0 0 2em #cbd8e5);
+}

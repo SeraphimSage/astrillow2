@@ -1,6 +1,21 @@
+import React, { useState } from "react";
+
 import PersonalLogo from "../images/Favicon.png";
 
+// This component is a responsive navigation menu that includes a logo, links, and a user profile dropdown.
 function Menu() {
+	// State to manage the visibility of the mobile menu and profile dropdown
+	// Using useState hook to create state variables and their setters
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+
+	const toggleMobileMenu = () => {
+		setIsMobileMenuOpen(!isMobileMenuOpen);
+	};
+
+	const toggleProfileDropdown = () => {
+		setIsProfileDropdownOpen(!isProfileDropdownOpen);
+	};
 	return (
 		<nav className="bg-gray-800 fixed top-0 inset-x-0 z-50">
 			<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -11,7 +26,8 @@ function Menu() {
 							type="button"
 							className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
 							aria-controls="mobile-menu"
-							aria-expanded="false"
+							aria-expanded={isMobileMenuOpen}
+							onClick={toggleMobileMenu}
 						>
 							<span className="absolute -inset-0.5"></span>
 							<span className="sr-only">Open main menu</span>
@@ -21,7 +37,7 @@ function Menu() {
             Menu open: "hidden", Menu closed: "block"
           --> */}
 							<svg
-								className="block size-6"
+								className={isMobileMenuOpen ? "hidden size-6" : "size-6"}
 								fill="none"
 								viewBox="0 0 24 24"
 								strokeWidth="1.5"
@@ -41,7 +57,7 @@ function Menu() {
             Menu open: "block", Menu closed: "hidden"
           --> */}
 							<svg
-								className="hidden size-6"
+								className={isMobileMenuOpen ? "block size-6" : "hidden size-6"}
 								fill="none"
 								viewBox="0 0 24 24"
 								strokeWidth="1.5"
@@ -57,10 +73,11 @@ function Menu() {
 							</svg>
 						</button>
 					</div>
-					<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+					<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ">
 						<div className="flex shrink-0 items-center">
 							<img
 								className="
+								logo
 								h-8 w-auto 
 								logo-spin-manual
 								will-change-filter 
@@ -133,8 +150,9 @@ function Menu() {
 									type="button"
 									className="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
 									id="user-menu-button"
-									aria-expanded="false"
+									aria-expanded={isProfileDropdownOpen}
 									aria-haspopup="true"
+									onClick={toggleProfileDropdown}
 								>
 									<span className="absolute -inset-1.5"></span>
 									<span className="sr-only">Open user menu</span>
@@ -156,42 +174,46 @@ function Menu() {
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
           --> */}
-							<div
-								className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-hidden"
-								role="menu"
-								aria-orientation="vertical"
-								aria-labelledby="user-menu-button"
-								tabIndex="-1"
-							>
-								{/* <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" --> */}
-								<a
-									href="#"
-									className="block px-4 py-2 text-sm text-gray-700"
-									role="menuitem"
+
+							{/* Dropdown menu, show/hide based on menu state. */}
+							{isProfileDropdownOpen && ( // Conditionally render based on state
+								<div
+									className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-hidden"
+									role="menu"
+									aria-orientation="vertical"
+									aria-labelledby="user-menu-button"
 									tabIndex="-1"
-									id="user-menu-item-0"
 								>
-									Your Profile
-								</a>
-								<a
-									href="#"
-									className="block px-4 py-2 text-sm text-gray-700"
-									role="menuitem"
-									tabIndex="-1"
-									id="user-menu-item-1"
-								>
-									Settings
-								</a>
-								<a
-									href="#"
-									className="block px-4 py-2 text-sm text-gray-700"
-									role="menuitem"
-									tabIndex="-1"
-									id="user-menu-item-2"
-								>
-									Sign out
-								</a>
-							</div>
+									{/* <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" --> */}
+									<a
+										href="#"
+										className="block px-4 py-2 text-sm text-gray-700"
+										role="menuitem"
+										tabIndex="-1"
+										id="user-menu-item-0"
+									>
+										Your Profile
+									</a>
+									<a
+										href="#"
+										className="block px-4 py-2 text-sm text-gray-700"
+										role="menuitem"
+										tabIndex="-1"
+										id="user-menu-item-1"
+									>
+										Settings
+									</a>
+									<a
+										href="#"
+										className="block px-4 py-2 text-sm text-gray-700"
+										role="menuitem"
+										tabIndex="-1"
+										id="user-menu-item-2"
+									>
+										Sign out
+									</a>
+								</div>
+							)}
 						</div>
 					</div>
 				</div>
@@ -199,7 +221,7 @@ function Menu() {
 
 			{/* <!-- Mobile menu, show/hide based on menu state. --> */}
 			<div
-				className="sm:hidden"
+				className={isMobileMenuOpen ? "sm:hidden" : "hidden sm:hidden"}
 				id="mobile-menu"
 			>
 				<div className="space-y-1 px-2 pt-2 pb-3">
