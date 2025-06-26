@@ -14,3 +14,16 @@
 .read-the-docs {
 	color: #888;
 }
+
+@keyframes logospin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.logo-spin-manual {
+	animation: logospin 10s linear infinite;
+}

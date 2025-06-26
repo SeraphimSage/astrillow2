@@ -1,6 +1,4 @@
-// import PersonalLogo from "../images/Favicon.png";
-
-import "../css/menu.css";
+import PersonalLogo from "../images/Favicon.png";
 
 function Menu() {
 	return (
@@ -62,9 +60,15 @@ function Menu() {
 					<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
 						<div className="flex shrink-0 items-center">
 							<img
-								className="h-8 w-auto"
-								src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-								alt="Your Company"
+								className="
+								h-8 w-auto 
+								logo-spin-manual
+								will-change-filter 
+								transition 
+								drop-shadow-[5px_5px_theme('colors.logo-white')]							
+								hover:drop-shadow-[0_0_1em_theme('colors.logo-white')]"
+								src={PersonalLogo}
+								alt="Seraphic Industries LLC Logo"
 							/>
 						</div>
 						<div className="hidden sm:ml-6 sm:block">
@@ -199,7 +203,6 @@ function Menu() {
 				id="mobile-menu"
 			>
 				<div className="space-y-1 px-2 pt-2 pb-3">
-					{/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
 					<a
 						href="#"
 						className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"

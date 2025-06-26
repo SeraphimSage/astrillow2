@@ -1,4 +1,5 @@
 module.exports = {
+	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
 			colors: {
@@ -7,6 +8,11 @@ module.exports = {
 				"electric-green": "#00FF7F",
 				"cyber-purple": "#8A2BE2",
 				"deep-gray": "#1A202C",
+				"glow-white": "#F0F0F0",
+				"scanline-gray": "#2D3748",
+				"futuristic-yellow": "#FFD700",
+				"neon-pink": "#FF1493",
+				"logo-white": "#cbd8e5",
 			},
 			fontFamily: {
 				futuristic: ['"Space Mono"', "monospace"], // Example, choose a cool font
@@ -31,7 +37,7 @@ module.exports = {
 				"flicker-slow": "flicker 4s linear infinite",
 				"scan-loop": "scanline 2s linear infinite alternate",
 			},
-			plugins: [],
 		},
 	},
+	plugins: [],
 };
