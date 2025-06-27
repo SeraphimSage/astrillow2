@@ -31,7 +31,7 @@ function Menu() {
 						>
 							<span className="absolute -inset-0.5"></span>
 							<span className="sr-only">Open main menu</span>
-							
+
 							<svg
 								className={isMobileMenuOpen ? "hidden size-6" : "size-6"}
 								fill="none"
@@ -47,7 +47,7 @@ function Menu() {
 									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 								/>
 							</svg>
-							
+
 							<svg
 								className={isMobileMenuOpen ? "block size-6" : "hidden size-6"}
 								fill="none"
@@ -82,31 +82,37 @@ function Menu() {
 						</div>
 						<div className="hidden sm:ml-6 sm:block">
 							<div className="flex space-x-4">
-								{/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
+								{/* Navigation links */}
 								<a
-									href="#"
+									href="/"
 									className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
 									aria-current="page"
 								>
-									Dashboard
+									Home
 								</a>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 								>
-									Team
+									Saved Asteroids
 								</a>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
+								>
+									Search Asteroids
+								</a>
+								<a
+									href="#"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 								>
 									Projects
 								</a>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 								>
-									Calendar
+									Space Act Info
 								</a>
 							</div>
 						</div>
@@ -114,7 +120,7 @@ function Menu() {
 					<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 						<button
 							type="button"
-							className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+							className="relative rounded-full bg-gray-800 p-1 text-neon-blue hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
 						>
 							<span className="absolute -inset-1.5"></span>
 							<span className="sr-only">View notifications</span>
@@ -168,7 +174,7 @@ function Menu() {
 									{/* <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" --> */}
 									<a
 										href="#"
-										className="block px-4 py-2 text-sm text-gray-700"
+										className="block px-4 py-2 text-sm text-white"
 										role="menuitem"
 										tabIndex="-1"
 										id="user-menu-item-0"
@@ -177,7 +183,7 @@ function Menu() {
 									</a>
 									<a
 										href="#"
-										className="block px-4 py-2 text-sm text-gray-700"
+										className="block px-4 py-2 text-sm text-white"
 										role="menuitem"
 										tabIndex="-1"
 										id="user-menu-item-1"
@@ -186,7 +192,7 @@ function Menu() {
 									</a>
 									<a
 										href="#"
-										className="block px-4 py-2 text-sm text-gray-700"
+										className="block px-4 py-2 text-sm text-white"
 										role="menuitem"
 										tabIndex="-1"
 										id="user-menu-item-2"
@@ -206,29 +212,35 @@ function Menu() {
 			>
 				<div className="space-y-1 px-2 pt-2 pb-3">
 					<a
-						href="#"
+						href="/"
 						className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
 						aria-current="page"
 					>
-						Dashboard
+						Home
 					</a>
 					<a
 						href="#"
-						className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 					>
-						Team
+						Saved Asteroids
 					</a>
 					<a
 						href="#"
-						className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
+					>
+						Search Asteroids
+					</a>
+					<a
+						href="#"
+						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 					>
 						Projects
 					</a>
 					<a
 						href="#"
-						className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 					>
-						Calendar
+						Space Act Info
 					</a>
 				</div>
 			</div>
