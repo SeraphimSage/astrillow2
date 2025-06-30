@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router";
 
 import PersonalLogo from "../images/Favicon.png";
 
@@ -74,8 +75,8 @@ function Menu() {
 								logo-spin-manual
 								will-change-filter 
 								transition 
-								drop-shadow-[5px_5px_theme('colors.logo-white')]							
-								hover:drop-shadow-[0_0_1em_theme('colors.logo-white')]"
+								drop-shadow-[5px_5px_logo-white]							
+								hover:drop-shadow-[0_0_1em_logo-white]"
 								src={PersonalLogo}
 								alt="Seraphic Industries LLC Logo"
 							/>
@@ -83,34 +84,35 @@ function Menu() {
 						<div className="hidden sm:ml-6 sm:block">
 							<div className="flex space-x-4">
 								{/* Navigation links */}
-								<a
-									href="/"
-									className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+								<NavLink
+									to="/"
+									className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
 									aria-current="page"
+									end
 								>
 									Home
-								</a>
+								</NavLink>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
 								>
 									Saved Asteroids
 								</a>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
 								>
 									Search Asteroids
 								</a>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
 								>
 									Projects
 								</a>
 								<a
-									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
+									href="/spaceacts"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
 								>
 									Space Act Info
 								</a>

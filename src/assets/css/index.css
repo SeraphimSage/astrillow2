@@ -1,3 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+	--color-dark-space: #0a0a1a;
+	--color-neon-blue: #00f0ff;
+	--color-electric-green: "#00FF7F";
+	--color-cyber-purple: "#8A2BE2";
+	--color-deep-gray: "#1A202C";
+	--color-glow-white: "#F0F0F0";
+	--color-scanline-gray: "#2D3748";
+	--color-futuristic-yellow: "#FFD700";
+	--color-neon-pink: "#FF1493";
+	--color-logo-white: "#cbd8e5";
+
+	--shadow-neon-glow:
+		0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+}
+
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
@@ -11,6 +29,13 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
 }
 
 body {
@@ -42,4 +67,30 @@ body {
 	background-image: url(../images/133303main_image_feature_406_ys_full.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	color: var(--color-glow-white);
+}
+
+@keyframes logospin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.logo-spin-manual {
+	animation: logospin 10s linear infinite;
+}
+
+.logo {
+	will-change: filter;
+	transition: filter 300ms;
+	filter: drop-shadow(1px 1px #cbd8e5);
+}
+
+.logo:hover {
+	filter: drop-shadow(0 0 2em #cbd8e5);
 }

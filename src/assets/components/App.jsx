@@ -1,5 +1,4 @@
 // import { useState } from "react";
-import "../css/App.css";
 
 import Menu from "./menu.jsx";
 import Footer from "./footer.jsx";

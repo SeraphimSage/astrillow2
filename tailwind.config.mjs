@@ -18,10 +18,6 @@ module.exports = {
 				futuristic: ['"Space Mono"', "monospace"], // Example, choose a cool font
 				display: ['"Orbitron"', "sans-serif"], // Another example for headings
 			},
-			boxShadow: {
-				"neon-glow":
-					"0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5)",
-			},
 			keyframes: {
 				flicker: {
 					"0%, 100%": { opacity: 1 },
@@ -56,5 +52,6 @@ module.exports = {
 			});
 		}),
 		require("tailwindcss-animate"),
-		require("tailwind-scrollbar")],
+		require("tailwind-scrollbar"),
+	],
 };

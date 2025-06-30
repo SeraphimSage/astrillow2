@@ -1,0 +1,13 @@
+// export { default as FourOhfour } from './404.jsx';
+export { default as App } from "./App.jsx";
+// export { default as AsteroidPage } from './asteroidPage.jsx';
+export { default as Footer } from "./footer.jsx";
+export { default as Menu } from "./menu.jsx";
+// export { default as ListAsteroid } from "./listAsteroid.jsx";
+// export { default as Login } from "./header.jsx";
+// export { default as SavedAsteroidCard } from "./savedAsteroidCard.jsx";
+// export { default as SearchFilter } from "./searchFilter.jsx";
+// export { default as ServerError } from "./serverError.jsx";
+// export { default as SignUp } from "./signup.jsx";
+export { default as SpaceActs } from "./spaceActs.jsx";
+// export { default as SpaceMap } from "./spaceMap.jsx";
