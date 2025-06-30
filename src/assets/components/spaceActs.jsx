@@ -19,6 +19,7 @@ function SpaceActs() {
 				<a
 					href="https://www.congress.gov/bill/114th-congress/house-bill/2262/text"
 					className="text-neon-blue hover:underline"
+					target="_blank"
 				>
 					Space Acts
 				</a>{" "}
