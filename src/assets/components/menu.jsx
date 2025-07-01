@@ -25,7 +25,7 @@ function Menu() {
 						{/* <!-- Mobile menu button--> */}
 						<button
 							type="button"
-							className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+							className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white "
 							aria-controls="mobile-menu"
 							aria-expanded={isMobileMenuOpen}
 							onClick={toggleMobileMenu}
@@ -68,8 +68,13 @@ function Menu() {
 					</div>
 					<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ">
 						<div className="flex shrink-0 items-center">
-							<img
-								className="
+							<NavLink
+								to="https://seraphimsage.github.io/portfolio/"
+								target="_blank"
+								end
+							>
+								<img
+									className="
 								logo
 								h-8 w-auto 
 								logo-spin-manual
@@ -77,9 +82,10 @@ function Menu() {
 								transition 
 								drop-shadow-[5px_5px_logo-white]							
 								hover:drop-shadow-[0_0_1em_logo-white]"
-								src={PersonalLogo}
-								alt="Seraphic Industries LLC Logo"
-							/>
+									src={PersonalLogo}
+									alt="Seraphic Industries LLC Logo"
+								/>
+							</NavLink>
 						</div>
 						<div className="hidden sm:ml-6 sm:block">
 							<div className="flex space-x-4">
@@ -122,7 +128,7 @@ function Menu() {
 					<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 						<button
 							type="button"
-							className="relative rounded-full bg-gray-800 p-1 text-neon-blue hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+							className="relative rounded-full bg-gray-800 p-1 text-neon-blue hover:text-white "
 						>
 							<span className="absolute -inset-1.5"></span>
 							<span className="sr-only">View notifications</span>
@@ -148,7 +154,7 @@ function Menu() {
 							<div>
 								<button
 									type="button"
-									className="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+									className="relative flex rounded-full bg-gray-800 text-sm "
 									id="user-menu-button"
 									aria-expanded={isProfileDropdownOpen}
 									aria-haspopup="true"
