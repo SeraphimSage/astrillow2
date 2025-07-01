@@ -92,7 +92,7 @@ function Menu() {
 								{/* Navigation links */}
 								<NavLink
 									to="/"
-									className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
+									className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow transform hover:scale-105"
 									aria-current="page"
 									end
 								>
@@ -100,25 +100,25 @@ function Menu() {
 								</NavLink>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									Saved Asteroids
 								</a>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									Search Asteroids
 								</a>
 								<a
 									href="#"
-									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									Projects
 								</a>
 								<a
 									href="/spaceacts"
-									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue active:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									Space Act Info
 								</a>
@@ -245,7 +245,7 @@ function Menu() {
 						Projects
 					</a>
 					<a
-						href="#"
+						href="/spaceacts"
 						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 					>
 						Space Act Info
