@@ -21,13 +21,8 @@ function Footer() {
 
 	return (
 		<footer className="bg-gray-900/60 backdrop-blur-lg fixed bottom-0 inset-x-0 z-50 border-t border-gray-700/50 py-2">
-			<div className="container mx-auto text-center flex items-center px-4">
-				{/*    
-                       bg-gray-900/60 backdrop-blur-lg fixed bottom-0 inset-x-0 z-50 border-t border-gray-700/50 py-4">
-            {     
-
-				 */}
-				<p className="text-sm flex-grow justify-between whitespace-nowrap">
+			<div className="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex items-center justify-between">
+				<p className="text-sm whitespace-nowrap">
 					&copy; {new Date().getFullYear()} Astrillow. All rights reserved.
 				</p>
 				{isVisible && (
