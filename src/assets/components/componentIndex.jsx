@@ -1,7 +1,9 @@
 // export { default as FourOhfour } from './404.jsx';
 export { default as App } from "./App.jsx";
+export { default as About } from "./about.jsx";
 // export { default as AsteroidPage } from './asteroidPage.jsx';
 export { default as Footer } from "./footer.jsx";
+export { default as FourOhFour } from "./fourOhFour.jsx";
 export { default as Menu } from "./menu.jsx";
 // export { default as ListAsteroid } from "./listAsteroid.jsx";
 export { default as Login } from "./login.jsx";

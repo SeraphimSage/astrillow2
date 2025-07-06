@@ -6,6 +6,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import "./assets/css/index.css";
 import {
 	App,
+	About,
+	FourOhFour,
 	Login,
 	Logout,
 	Profile,
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
 	{ path: "/logout", element: <Logout /> },
 	{ path: "/profile", element: <Profile /> },
 	{ path: "/spaceacts", element: <SpaceActs /> },
+	{ path: "/about", element: <About /> },
+
+	// Fallback route for unmatched paths
+	{ path: "*", element: <FourOhFour /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

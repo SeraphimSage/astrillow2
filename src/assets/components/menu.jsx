@@ -134,6 +134,12 @@ function Menu() {
 								>
 									Space Act Info
 								</a>
+								<a
+									href="/about"
+									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:text-white hover:shadow-neon-glow transform hover:scale-105"
+								>
+									About Astrillow2
+								</a>
 							</div>
 						</div>
 					</div>
@@ -192,7 +198,7 @@ function Menu() {
 										tabIndex="-1"
 									>
 										<a
-											href="#"
+											href="/profile"
 											className="block px-4 py-2 text-sm text-white"
 											role="menuitem"
 											tabIndex="-1"
