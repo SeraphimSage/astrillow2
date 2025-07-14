@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 import "./assets/css/index.css";
@@ -14,6 +14,18 @@ import {
 	SpaceActs,
 } from "./assets/components/componentIndex.jsx";
 
+const router = createHashRouter([
+	{ path: "/", element: <App /> },
+	{ path: "/login", element: <Login /> },
+	{ path: "/logout", element: <Logout /> },
+	{ path: "/profile", element: <Profile /> },
+	{ path: "/spaceacts", element: <SpaceActs /> },
+	{ path: "/about", element: <About /> },
+
+	// Fallback route for unmatched paths
+	{ path: "*", element: <FourOhFour /> },
+]);
+
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
 		<Auth0Provider
@@ -23,40 +35,7 @@ createRoot(document.getElementById("root")).render(
 			useRefreshTokens={true}
 			cacheLocation="localstorage"
 		>
-			<HashRouter>
-				<Routes>
-					<Route
-						path="/"
-						element={<App />}
-					></Route>
-					<Route
-						path="/login"
-						element={<Login />}
-					></Route>
-					<Route
-						path="/logout"
-						element={<Logout />}
-					></Route>
-					<Route
-						path="/profile"
-						element={<Profile />}
-					></Route>
-					<Route
-						path="/spaceacts"
-						element={<SpaceActs />}
-					></Route>
-					<Route
-						path="/about"
-						element={<About />}
-					></Route>
-
-					{/* Fallback route */}
-					<Route
-						path="*"
-						element={<FourOhFour />}
-					></Route>
-				</Routes>
-			</HashRouter>
+			<RouterProvider router={router} />
 		</Auth0Provider>
 	</StrictMode>
 );
