@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import PersonalLogo from "../images/Favicon.png";
@@ -80,8 +80,8 @@ function Menu() {
 					</div>
 					<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ">
 						<div className="flex shrink-0 items-center">
-							<NavLink
-								to="https://seraphimsage.github.io/portfolio/"
+							<a
+								href="https://seraphimsage.github.io/portfolio/"
 								target="_blank"
 								end
 							>
@@ -97,7 +97,7 @@ function Menu() {
 									src={PersonalLogo}
 									alt="Seraphic Industries LLC Logo"
 								/>
-							</NavLink>
+							</a>
 						</div>
 						<div className="hidden sm:ml-6 sm:block">
 							<div className="flex space-x-4">
@@ -110,36 +110,36 @@ function Menu() {
 								>
 									Home
 								</NavLink>
-								<a
-									href="#"
+								<NavLink
+									to="#"
 									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									Saved Asteroids
-								</a>
-								<a
-									href="#"
+								</NavLink>
+								<NavLink
+									to="#"
 									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									Search Asteroids
-								</a>
-								<a
-									href="#"
+								</NavLink>
+								<NavLink
+									to="#"
 									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									Projects
-								</a>
-								<a
-									href="/spaceacts"
+								</NavLink>
+								<NavLink
+									to="/spaceacts"
 									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									Space Act Info
-								</a>
-								<a
-									href="/about"
+								</NavLink>
+								<NavLink
+									to="/about"
 									className="rounded-md px-3 py-2 text-sm font-medium text-neon-blue hover:text-white hover:shadow-neon-glow transform hover:scale-105"
 								>
 									About Astrillow2
-								</a>
+								</NavLink>
 							</div>
 						</div>
 					</div>
@@ -197,24 +197,24 @@ function Menu() {
 										aria-labelledby="user-menu-button"
 										tabIndex="-1"
 									>
-										<a
-											href="/profile"
+										<NavLink
+											to="/profile"
 											className="block px-4 py-2 text-sm text-white"
 											role="menuitem"
 											tabIndex="-1"
 											id="user-menu-item-0"
 										>
 											Your Profile
-										</a>
-										<a
-											href="#"
+										</NavLink>
+										<NavLink
+											to="#"
 											className="block px-4 py-2 text-sm text-white"
 											role="menuitem"
 											tabIndex="-1"
 											id="user-menu-item-1"
 										>
 											Settings
-										</a>
+										</NavLink>
 										<Logout onActionComplete={handleAuthActionComplete} />
 									</div>
 								)}
@@ -231,37 +231,37 @@ function Menu() {
 				id="mobile-menu"
 			>
 				<div className="space-y-1 px-2 pt-2 pb-3">
-					<a
-						href="/"
+					<NavLink
+						to="/"
 						className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
 						aria-current="page"
 					>
 						Home
-					</a>
-					<a
-						href="#"
+					</NavLink>
+					<NavLink
+						to="#"
 						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 					>
 						Saved Asteroids
-					</a>
-					<a
-						href="#"
+					</NavLink>
+					<NavLink
+						to="#"
 						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 					>
 						Search Asteroids
-					</a>
-					<a
-						href="#"
+					</NavLink>
+					<NavLink
+						to="#"
 						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 					>
 						Projects
-					</a>
-					<a
-						href="/spaceacts"
+					</NavLink>
+					<NavLink
+						to="/spaceacts"
 						className="block rounded-md px-3 py-2 text-base font-medium text-neon-blue hover:bg-gray-700 hover:text-white"
 					>
 						Space Act Info
-					</a>
+					</NavLink>
 				</div>
 			</div>
 		</nav>
