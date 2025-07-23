@@ -34,6 +34,7 @@ createRoot(document.getElementById("root")).render(
 			authorizationParams={{
 				redirect_uri: window.location.origin + window.location.pathname + "#/",
 				responseMode: "query",
+				audience: import.meta.env.VITE_AUTH0_AUDIENCE,
 			}}
 			useRefreshTokens={true}
 			cacheLocation="localstorage"
